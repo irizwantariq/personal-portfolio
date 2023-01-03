@@ -1,0 +1,370 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    font-family:poppin , sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: black;
+    color: #fff;
+}
+/* header start */
+#header{
+    width: 100%;
+    height:100vh;
+    background-image: url(images/background-01.png);
+    background-size: cover;
+    background-position: center;    
+}
+.container{
+    padding: 10px 10%;
+}
+.topnav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+.logo{
+    width: 140px;
+}
+.topnav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+.topnav ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+.topnav ul li a::after{
+    content: "";
+    width: 0;
+    height: 3px;
+    background: #faa135;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+.topnav ul li a:hover::after{
+    width: 100%;
+}
+.hero-text{
+    margin-top: 20%;
+    font-size: 30px;
+}
+.hero-text h1{
+    font-size: 60px;
+    margin-top: 20px;
+}
+.hero-text h1 span{
+    color: #faa135;
+}
+/* header end */
+
+/* about Start */
+#about{
+    color: #ababaa;
+    padding: 80px 0;
+
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+.about-col-1{
+    flex-basis: 35%;
+}
+.about-col-1 img{
+    width: 100%;
+    border-radius: 15px;
+}
+.about-col-2{
+    flex-basis: 60%;
+}
+.about-me{
+    font-size: 60px;
+    color: #fff;
+    font-weight: 600;
+    
+}
+.tabs-titles{
+    display: flex;
+    margin: 20px 0 40px;
+
+}
+.tabl-links{
+    margin-right: 50px;
+    font-size: 30px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.tabl-links::after{
+    content: "";
+    width: 30px;
+    height: 3px;
+    background: #faa135;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+    
+}
+.tab-li li{
+    list-style: none;
+
+}
+.tab-li span{
+    color: #faa135;
+    font-size: 18px;
+}
+
+/* about End */
+
+
+/* Services start */
+#services{
+    padding: 30px 0;
+}
+.services-list{
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+     grid-gap: 40px;
+     margin-top: 50px;
+}
+.services-list div{
+    background-color: #262626;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 5px;
+    transition: backgroung 0.5s,transform 0.5s;
+}
+.services-list div i{
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+.services-list div h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.services-list div a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+.services-list div:hover{
+    background-color: #c46e05;
+    transform: translateY(-10px);
+}
+/* Services End */
+
+/* Portfolio Start */
+#portfolio{
+    padding: 50px 0;
+}
+.work-list{
+    display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+     grid-gap: 40px;
+     margin-top: 50px;
+}
+.work{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.work img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+.info-layer{
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,0.6),#c46e05);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s;
+}
+.info-layer h3{
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.info-layer a{
+    margin-top: 20px;
+    color: #c46e05;
+    font-size: 18px;
+    text-decoration: none;
+    line-height: 60px;
+    background-color: #fff;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+}
+.work:hover img{
+    transform: scale(1.1);
+}
+.work:hover .info-layer{
+    height: 100%;
+}
+.btn{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #c46e05;
+    padding: 14px 50px;
+    border-radius: 30px;
+    text-decoration: none;
+    color: #fff;
+    transition: background 0.5s;
+}
+.btn:hover{
+    background-color: #c46e05;
+}
+/* Portfolio end */
+
+/* Contact start */
+.contact-left{
+    flex-basis: 35%;
+}
+.contact-right{
+    flex-basis: 60%;
+}
+.contact-left p{
+    margin-top: 30px;
+}
+.contact-left p i{
+    color: #c46e05;
+    margin-right: 15px;
+    font-size: 25px;
+}
+.social-icon{
+    margin-top: 30px;
+}
+.social-icon a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #fff;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+.social-icon a:hover{
+    color: #c46e05;
+    transform: translateY(-5px);
+}
+.btn.btn2{
+    display: inline-block;
+    background-color: #c46e05;
+    cursor: pointer;
+ 
+}
+.contact-right form{
+    width: 100%;
+}
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font: 18px;
+    border-radius:20px;    
+}
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #262626;
+    font-weight: 300;
+    margin-top: 20px;
+}
+/* End */
+nav .fa-solid{
+    display: none;
+}
+/* Responsive Website */
+@media only screen and (max-width:600px){
+    #header{
+        background-image: url(images/phone-background.png);
+    }     
+    .hero-text{
+        margin-top: 100%;
+        font-size: 16px;
+    }
+    .hero-text h1{
+        font-size: 30px;
+    }
+    nav .fa-solid{
+        display: block;
+        font-size: 25px;
+    }
+    nav ul{
+        background: #c46e05;
+        position: fixed;
+        top: 0;
+        right:-200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+    }
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+    nav ul .fa-solid{
+        position: absolute;
+        top:  25px;
+        left: 25px;
+        cursor:pointer;
+    }
+    .about-me{
+        font-size: 40px;
+    }
+    .about-col-1, .about-col-2{
+        flex-basis: 100%;
+    }
+    .about-col-1{
+        margin-bottom: 30px;
+    }
+    .about-col-2{
+        font-size: 14px;
+    }
+    .tabl-links{
+        font-size: 16px;
+        margin-right: 20px;
+    }
+    .contact-left, .contact-right{
+        flex-basis: 100%;
+    }
+    .copyright{
+     font-size: 14px;
+    }
+    
+}
